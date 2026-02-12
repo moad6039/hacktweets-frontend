@@ -1,22 +1,125 @@
-.main {
+.container {
+  background-color: #15202b;
+  display: flex;
+  
+}
+
+.partOne {
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px #3b444f solid;
+}
+
+.logoBlock {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.containerUser{
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
+  height: 300px;
 }
 
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+.identifiant {
+  display: flex;
+  flex-direction: column;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.firstname {
+  margin: 10px 0 5px 0;
+  color: white;
 }
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+.lastname {
+  color: white;
+}
+
+.profilPicture {
+  width: 100px;
+}
+
+.userAccountDisplay {
+  display: flex;
+  height: 200px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout {
+  background-color: transparent;
+  border: 1px white solid;
+  padding: 15px;
+  font-weight: 500;
+  color: white;
+  border-radius: 20px;
+}
+
+.partTwo {
+  width: 60%;
+  border: 1px #3b444f solid;
+}
+
+.header {
+  color: white;
+  text-align: center;
+}
+
+.blockInputTweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.inputTweet {
+  height: 50px;
+  width: 800px;
+  background-color: transparent;
+  border-bottom: white 1px solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.blockButtonCharacters {
+  padding-top: 40px;
+  padding-right: 100px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: end;
+  border-bottom: 1px #3b444f solid;
+}
+
+.numberCharacter {
+  color: white;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.tweetButton {
+  border: none;
+  border-radius: 20px;
+  width: 150px;
+  height: 30px;
+}
+
+.trendBlock {
+  width: 400px
+}
+
+.trendHeader {
+  color: white;
+  text-align: center;
 }
