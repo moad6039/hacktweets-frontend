@@ -1,6 +1,5 @@
 import styles from "../styles/Login.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import Signup from "./Signup";
 
 function Login() {
@@ -20,14 +19,18 @@ function Login() {
           <h1>See what's happening</h1>
         </div>
         <div className={styles.sentence}>
-          <p>Join Hackatweet today</p>
+          <p>
+            <strong>Join Hackatweet today</strong>
+          </p>
         </div>
         <div className={styles.buttonGroup}>
-          <button href="/" className={styles.signupLink}>
+          <button href="/" className={styles.signupButton}>
             Sign up
           </button>
-          <p>Already have an account ?</p>
-          <button href="/" className={styles.signinLink}>
+          <p className={styles.sentence2}>
+            <strong>Already have an account ?</strong>
+          </p>
+          <button href="/" className={styles.signinButton}>
             Sign in
           </button>
         </div>
