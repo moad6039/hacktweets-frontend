@@ -68,8 +68,8 @@
 
 /* Contenu de la modale */
 .modalContent {
-  background-color: rgb(37, 37, 41);
-  padding: 30px;
+  background-color: rgb(37, 37, 41,1);
+  padding: 50px;
   border-radius: 20px;
   max-width: 600px;
   width: 90%;
@@ -78,10 +78,10 @@
   background: none;
   border: none;
   color: #fff;
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
   padding: 0;
-  width: 30px;
+  width: 0px;
   height: 30px;
   display: flex;
   align-items: center;

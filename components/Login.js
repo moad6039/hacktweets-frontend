@@ -18,7 +18,7 @@ function Login() {
                 className={styles.closeButton}
                 onClick={() => setShowSignup(false)}
               >
-                ×
+                X
               </button>
               <Signup />
             </div>
@@ -33,7 +33,7 @@ function Login() {
                 className={styles.closeButton}
                 onClick={() => setShowSignin(false)}
               >
-                ×
+                X
               </button>
               <Signin />
             </div>
