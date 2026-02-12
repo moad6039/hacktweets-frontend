@@ -1,12 +1,14 @@
 import styles from "../styles/Login.module.css";
 import Image from "next/image";
 import Signup from "./Signup";
+import Signin from "./Signin";
 
 function Login() {
   return (
     <div>
-      <Signup />
       <main className={styles.main}>
+        <Signup />
+        <Signin />
         <div className={styles.logo}>
           <Image
             src="/Twitter_logo.png"
