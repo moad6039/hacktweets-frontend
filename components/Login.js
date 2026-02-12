@@ -2,13 +2,28 @@ import styles from "../styles/Login.module.css";
 import Image from "next/image";
 import Signup from "./Signup";
 import Signin from "./Signin";
+import { useState } from "react";
 
 function Login() {
+  const [showSignup, setShowSignup] = useState(false);
   return (
     <div>
       <main className={styles.main}>
-        <Signup />
-        <Signin />
+        {/* Modale Signup */}
+        {showSignup && (
+          <div className={styles.modalOverlay}>
+            <div className={styles.modalContent}>
+              <button
+                className={styles.closeButton}
+                onClick={() => setShowSignup(false)}
+              >
+                ×
+              </button>
+              <Signup />
+            </div>
+          </div>
+        )}
+        {/* Logo in Login */}
         <div className={styles.logo}>
           <Image
             src="/Twitter_logo.png"
@@ -26,7 +41,8 @@ function Login() {
           </p>
         </div>
         <div className={styles.buttonGroup}>
-          <button href="/" className={styles.signupButton}>
+          <button onClick={()=> setShowSignup(true)}
+          href="/" className={styles.signupButton}>
             Sign up
           </button>
           <p className={styles.sentence2}>

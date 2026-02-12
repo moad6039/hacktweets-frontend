@@ -9,7 +9,7 @@
   background-position: center;
   background-color: black;
 }
-
+/* See what's happening */
 .title {
   line-height: 1.15;
   font-size: 2rem;
@@ -47,4 +47,87 @@
 .sentence2 {
   line-height: 1.15;
   color: white;
+}
+
+/* Modale overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: "rgba(0, 0, 0, 0.8)";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Contenu de la modale */
+.modalContent {
+  background-color: black;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+}
+/* Bouton fermer */
+.closeButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+.closeButton:hover {
+  color: red;
+}
+/* Container du formulaire Signup */
+.signupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+/* Champs de saisie */
+.input {
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+}
+
+.input::placeholder {
+  color: #666;
+}
+.input:focus {
+  outline: none;
+  border-color: #1d9bf0;
+}
+/* Bouton Sign up dans la modale */
+.signupButtonModal {
+  width: 50%;
+  padding: 15px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signupButtonModal:hover {
+  background-color: greenyellow;
 }
