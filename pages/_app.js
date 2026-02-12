@@ -1,12 +1,11 @@
-import '../styles/globals.css';
-import Head from 'next/head';
+import "../styles/globals.css";
+import Head from "next/head";
 
 function App({ Component, pageProps }) {
   return (
     <>
-     <Login />
       <Head>
-        <title>Next.js App</title>
+        <title>HACKATWEET</title>
       </Head>
       <Component {...pageProps} />
     </>

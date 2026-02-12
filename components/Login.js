@@ -7,10 +7,10 @@ function Login() {
   return (
     <div>
       <main className={styles.main}>
-        <div className={styles.logo}>LOGO
+        <div className={styles.logo}>
            <Image
               src="/Twitter_logo.png"
-              alt="Planifier"
+              alt="Logo-twitter"
               width={100}
               height={100}
             />
@@ -22,9 +22,9 @@ function Login() {
           <p>Join Hackatweet today</p>
         </div>
         <div className={styles.buttonGroup}>
-          <Link href="/" className={styles.signupLink}>Sign up</Link>
+          <button href="/" className={styles.signupLink}>Sign up</button>
           <p>Already have an account ?</p>
-          <Link href="/"className={styles.signinLink}>Sign in</Link>
+          <button href="/"className={styles.signinLink}>Sign in</button>
         </div>
       </main>
     </div>
