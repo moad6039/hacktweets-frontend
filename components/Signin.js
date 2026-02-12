@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/Login.module.css";
 
-function Signin(props) {
+function Signin() {
   return (
     <>
       <div>
