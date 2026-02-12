@@ -6,6 +6,7 @@ import { useState } from "react";
 
 function Login() {
   const [showSignup, setShowSignup] = useState(false);
+  const [showSignin, setShowSignin] = useState(false);
   return (
     <div>
       <main className={styles.main}>
@@ -23,7 +24,22 @@ function Login() {
             </div>
           </div>
         )}
-        {/* Logo in Login */}
+
+        {/* Modale Signin */}
+        {showSignin && (
+          <div className={styles.modalOverlay}>
+            <div className={styles.modalContent}>
+              <button
+                className={styles.closeButton}
+                onClick={() => setShowSignin(false)}
+              >
+                ×
+              </button>
+              <Signin />
+            </div>
+          </div>
+        )}
+        {/* Logo of Login */}
         <div className={styles.logo}>
           <Image
             src="/Twitter_logo.png"
@@ -37,18 +53,23 @@ function Login() {
         </div>
         <div className={styles.sentence}>
           <p>
-            <strong>Join Hackatweet today</strong>
+            <strong>Join Hackatweet today.</strong>
           </p>
         </div>
         <div className={styles.buttonGroup}>
-          <button onClick={()=> setShowSignup(true)}
-          href="/" className={styles.signupButton}>
+          <button
+            onClick={() => setShowSignup(true)}
+            className={styles.signupButton}
+          >
             Sign up
           </button>
           <p className={styles.sentence2}>
             <strong>Already have an account ?</strong>
           </p>
-          <button href="/" className={styles.signinButton}>
+          <button
+            onClick={() => setShowSignin(true)}
+            className={styles.signinButton}
+          >
             Sign in
           </button>
         </div>

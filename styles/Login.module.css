@@ -5,47 +5,49 @@
   align-items: center;
   min-height: 100vh;
   min-width: 100vw;
-  background-size: cover;
-  background-position: center;
   background-color: black;
 }
 /* See what's happening */
 .title {
-  line-height: 1.15;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
 }
 .sentence {
-  line-height: 1.15;
-  font-size: 2rem;
+  line-height: 2;
+  font-size: 2.5rem;
   color: white;
 }
 
 .signupButton {
+  line-height: 2;
+  font-size: 20px;
   background-color: #3b9fd1;
   color: white;
   border: none;
   border-radius: 4px;
-  padding: 8px 16px;
+  padding: 15px 16px;
   cursor: pointer;
   font-weight: bold;
   border-radius: 20px;
-  margin-left: 50px;
+  margin-left: 90px;
 }
 .signinButton {
+  line-height: 2;
+  font-size: 20px;
   background-color: black;
   color: white;
   border: none;
   border-radius: 4px;
-  padding: 8px 16px;
+  padding: 15px 16px;
   cursor: pointer;
   font-weight: bold;
   border: 2px white solid;
   border-radius: 20px;
-  margin-left: 50px;
+  margin-left: 90px;
 }
 .sentence2 {
-  line-height: 1.15;
+  line-height: 4;
+  font-size: 1.5rem;
   color: white;
 }
 
@@ -65,13 +67,12 @@
 
 /* Contenu de la modale */
 .modalContent {
-  background-color: black;
+  background-color: rgb(37, 37, 41);
   padding: 30px;
   border-radius: 20px;
   max-width: 600px;
   width: 90%;
 }
-/* Bouton fermer */
 .closeButton {
   background: none;
   border: none;
@@ -90,8 +91,8 @@
 .closeButton:hover {
   color: red;
 }
-/* Container du formulaire Signup */
-.signupContainer {
+/* Container du formulaire Signup et Signin */
+.signContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,7 +116,7 @@
   border-color: #1d9bf0;
 }
 /* Bouton Sign up dans la modale */
-.signupButtonModal {
+.signButtonModal {
   width: 50%;
   padding: 15px;
   background-color: #fff;
@@ -128,6 +129,6 @@
   margin-top: 10px;
 }
 
-.signupButtonModal:hover {
-  background-color: greenyellow;
+.signButtonModal:hover {
+  background-color: green;
 }
