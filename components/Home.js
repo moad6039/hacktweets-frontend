@@ -1,6 +1,5 @@
 import Tweet from "./Tweet";
 import styles from "../styles/Home.module.css";
-import { useEffect, useState } from "react";
 import Left from "./left";
 import Right from "./Right";
 import Middle from "./Middle";
