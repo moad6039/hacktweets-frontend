@@ -1,12 +1,14 @@
 import "../styles/globals.css";
 import Head from "next/head";
-import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
 import users from "../reducers/user";
+import Home from "../components/Home";
+import Login from "../components/Login";
 
 const store = configureStore({
-  reducer: {users},
-})
+  reducer: { users },
+});
 
 function App({ Component, pageProps }) {
   return (

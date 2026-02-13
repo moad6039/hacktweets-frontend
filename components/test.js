@@ -2,15 +2,14 @@ import styles from "../styles/Login.module.css";
 import Image from "next/image";
 import Signup from "./Signup";
 import Signin from "./Signin";
-import { useState } from "react";
 import Home from "./Home";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 
 function Login() {
-  // partie Affichage Modal
   const [showSignup, setShowSignup] = useState(false);
   const [showSignin, setShowSignin] = useState(false);
-
+  
   const user = useSelector((state) => state.user?.value);
 
   // Si l'utilisateur est connecté, afficher Home
@@ -29,7 +28,7 @@ function Login() {
                 className={styles.closeButton}
                 onClick={() => setShowSignup(false)}
               >
-                x
+                ×
               </button>
               <Signup />
             </div>
@@ -44,12 +43,13 @@ function Login() {
                 className={styles.closeButton}
                 onClick={() => setShowSignin(false)}
               >
-                x
+                ×
               </button>
               <Signin />
             </div>
           </div>
         )}
+
         {/* Logo of Login */}
         <div className={styles.logo}>
           <Image
