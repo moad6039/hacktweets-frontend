@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
 import CompHashtag from "./CompHashtag";
 
-function Hashtag() {
+function HashtagPage() {
   const [tweets, setTweets] = useState([]);
   const [hashtag, setHashtag] = useState("");
   // get data tweets from backend
@@ -75,4 +75,4 @@ function Hashtag() {
   );
 }
 
-export default Hashtag;
+export default HashtagPage;

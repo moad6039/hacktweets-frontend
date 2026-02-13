@@ -1,9 +1,9 @@
 import Home from "../components/Home";
-import Hashtag from "../components/Hashtag";
+import HashtagPage from "../components/HashtagPage";
 import Login from "../components/Login";
 
 function Index() {
-  return <Hashtag />;
+  return <HashtagPage />;
 }
 
 export default Index;

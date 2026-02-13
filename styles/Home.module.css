@@ -119,7 +119,8 @@
 }
 
 .trendBlock {
-  width: 400px;
+  width: 30%;
+  margin-left: 15px;
 }
 
 .trendHeader {
