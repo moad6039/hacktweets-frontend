@@ -9,6 +9,7 @@ function Home() {
     <div className={styles.container}>
       <div className={styles.left}>
         <Left />
+      </div>
       <div className={styles.middle}>
         <Middle />
       </div>
