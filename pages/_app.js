@@ -3,8 +3,6 @@ import Head from "next/head";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import users from "../reducers/user";
-import Home from "../components/Home";
-import Login from "../components/Login";
 
 const store = configureStore({
   reducer: { users },
