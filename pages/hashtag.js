@@ -1,7 +1,7 @@
-import Hashtag from "../components/Hashtag";
+import HashtagPage from "../components/Hashtag";
 
 function HashtagPage() {
-  return <Hashtag />;
+  return <HashtagPage />;
 }
 
 export default HashtagPage;

@@ -1,7 +1,6 @@
 .container {
   background-color: #15202b;
   display: flex;
-  
 }
 
 .partOne {
@@ -22,7 +21,7 @@
   width: 100px;
 }
 
-.containerUser{
+.containerUser {
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -83,9 +82,10 @@
   align-items: center;
 }
 
-.inputTweet {
+.inputTweet,
+.inputHashtag {
   height: 50px;
-  width: 800px;
+  width: 80%;
   background-color: transparent;
   border-bottom: white 1px solid;
   border-left: none;
@@ -119,7 +119,8 @@
 }
 
 .trendBlock {
-  width: 400px
+  width: 30%;
+  margin-left: 15px;
 }
 
 .trendHeader {
