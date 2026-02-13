@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className={styles.container}>
       <Left />
-      <div className={styles.Middle}>
+      <div className={styles.middle}>
         <Middle />
       </div>
       <div className={styles.right}>

@@ -15,8 +15,10 @@ export default function Left() {
                     />
                     </button>
                 </div>
-                <UserDisplayInformations />
-                <LogoutButton />
+                <div>
+                    <UserDisplayInformations />
+                    <LogoutButton />
+                </div>
             </div>
         </>
     )
