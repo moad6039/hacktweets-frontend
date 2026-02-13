@@ -7,9 +7,7 @@ import Middle from "./Middle";
 function Home() {
   return (
     <div className={styles.container}>
-      <div className={styles.middle}>
         <Left />
-      </div>
       <div className={styles.middle}>
         <Middle />
       </div>
