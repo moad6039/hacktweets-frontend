@@ -1,29 +1,10 @@
 import Tweet from "./Tweet";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
+import Right from "./Right";
+import Middle from "./Middle";
 
 function Home() {
-  const [tweets, setTweets] = useState([]);
-  // get data tweets from backend
-  useEffect(() => {
-    fetch("http://localhost:3000/tweets")
-      .then((response) => response.json())
-      .then((data) => {
-        let tweets = data.tweet.map((tweet) => {
-          return (
-            <Tweet
-              message={tweet.message}
-              nbLike={tweet.nbLike}
-              time={tweet.time}
-              firstname={tweet.user.firstname}
-              username={tweet.user.lastname}
-            />
-          );
-        });
-        setTweets(tweets);
-      });
-  }, []);
-
   return (
     <div className={styles.container}>
       <div className={styles.partOne}>
@@ -51,25 +32,11 @@ function Home() {
           <button className={styles.logout}>Logout</button>
         </div>
       </div>
-      <div className={styles.partTwo}>
-        <h1 className={styles.header}>Home</h1>
-        <div className={styles.blockInputTweet}>
-          <input
-            type="text"
-            placeholder="What's up"
-            className={styles.inputTweet}
-          />
-        </div>
-        <div className={styles.blockButtonCharacters}>
-          <span className={styles.numberCharacter}>14/280</span>
-          <button className={styles.tweetButton}>Tweet</button>
-        </div>
-        <div className={styles.tweetBlock}>{tweets}</div>
+      <div className={styles.middle}>
+        <Middle />
       </div>
-      <div className={styles.partThree}>
-        <div className={styles.trendBlock}>
-          <h1 className={styles.trendHeader}>Trend</h1>
-        </div>
+      <div className={styles.right}>
+        <Right />
       </div>
     </div>
   );
