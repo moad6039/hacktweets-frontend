@@ -1,10 +1,9 @@
 import Tweet from "./Tweet"
 import styles from '../styles/Home.module.css';
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
 
 function Home() {
-
-
 
   const [tweets, setTweets] = useState([]);
   // get data tweets from backend
@@ -33,8 +32,8 @@ function Home() {
           <div className={styles.userAccountDisplay}>
               <img src='person.png' alt='photo de profil' className={styles.profilPicture}/>
               <div className={styles.identifiant}>
-                <span className={styles.firstname}>Firstname</span>
-                <span className={styles.lastname}>Lastname</span>
+                <span className={styles.firstname}>firstname</span>
+                <span className={styles.lastname}>username</span>
               </div>
           </div>
           <button className={styles.logout}>Logout</button>
