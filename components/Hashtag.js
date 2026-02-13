@@ -1,9 +1,11 @@
 import Tweet from "./Tweet";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
+import CompHashtag from "./CompHashtag";
 
-function Home() {
+function Hashtag() {
   const [tweets, setTweets] = useState([]);
+  const [hashtag, setHashtag] = useState("");
   // get data tweets from backend
   useEffect(() => {
     fetch("http://localhost:3000/tweets")
@@ -52,27 +54,25 @@ function Home() {
         </div>
       </div>
       <div className={styles.partTwo}>
-        <h1 className={styles.header}>Home</h1>
+        <h1 className={styles.header}>Hashtag</h1>
         <div className={styles.blockInputTweet}>
           <input
             type="text"
-            placeholder="What's up"
-            className={styles.inputTweet}
+            placeholder="Hashtag..."
+            className={styles.inputHashtag}
           />
-        </div>
-        <div className={styles.blockButtonCharacters}>
-          <span className={styles.numberCharacter}>14/280</span>
-          <button className={styles.tweetButton}>Tweet</button>
         </div>
         <div className={styles.tweetBlock}>{tweets}</div>
       </div>
       <div className={styles.partThree}>
+        <h1 className={styles.trendHeader}>Trend</h1>
         <div className={styles.trendBlock}>
-          <h1 className={styles.trendHeader}>Trend</h1>
+          {/* props expected : hashtag name & nbtweets related */}
+          <CompHashtag name={""} nbTweets={null} />
         </div>
       </div>
     </div>
   );
 }
 
-export default Home;
+export default Hashtag;
