@@ -1,6 +1,7 @@
 .container {
   background-color: #15202b;
   display: flex;
+  width: 100%;
 }
 
 .partOne {
