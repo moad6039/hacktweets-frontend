@@ -1,13 +1,13 @@
 import styles from "../styles/Home.module.css";
 import Hashtag from "../components/Hashtag";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Tweet from "./Tweet";
 
 function Middle(props) {
   const [tweets, setTweets] = useState([]);
   const [inputTweet, setInputTweet] = useState([]);
-  //const user = useSelector((state) => state.user.)
+  const user = useSelector((state) => state.value.user);
   // get data tweets from backend
   useEffect(() => {
     fetch("http://localhost:3000/tweets")
@@ -19,8 +19,8 @@ function Middle(props) {
               message={tweet.message}
               nbLike={tweet.nbLike}
               time={tweet.time}
-              firstname={tweet.user.firstname}
-              username={tweet.user.lastname}
+              firstname={tweet.firstname}
+              username={tweet.lastname}
             />
           );
         });
