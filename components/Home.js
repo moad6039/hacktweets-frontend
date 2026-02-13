@@ -2,44 +2,10 @@ import Tweet from "./Tweet";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
 import Left from "./left";
+import Right from "./Right";
+import Middle from "./Middle";
 
 function Home() {
-  const [tweets, setTweets] = useState([]);
-  const [inputTweet, setinputTweet] = useState("");
-  // get data tweets from backend
-  useEffect(() => {
-    fetch("http://localhost:3000/tweets")
-      .then((response) => response.json())
-      .then((data) => {
-        let tweets = data.tweet.map((tweet) => {
-          return (
-            <Tweet
-              message={tweet.message}
-              nbLike={tweet.nbLike}
-              time={tweet.time}
-              firstname={tweet.user.firstname}
-              username={tweet.user.lastname}
-            />
-          );
-        });
-        setTweets(tweets);
-    })
-  }, [])
-
-  const handleClickCreateTweet = () => {
-    fetch("http://localhost:3000/user", {
-      method: "POST",
-      headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({
-        message: inputTweet,
-        nbLike: 0,
-        time: Date.now(),
-      })
-    })
-    .then(response => response.json())
-    .then((tweet) => console.log(tweet))
-  }
-
   return (
     <div className={styles.container}>
       <Left />
@@ -56,10 +22,8 @@ function Home() {
             {tweets}
           </div>
       </div>
-      <div className={styles.partThree}>
-        <div className={styles.trendBlock}>
-          <h1 className={styles.trendHeader}>Trend</h1>
-        </div>
+      <div className={styles.right}>
+        <Right />
       </div>
     </div>
   );
