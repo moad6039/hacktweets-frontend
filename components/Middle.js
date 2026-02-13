@@ -5,6 +5,7 @@ import Tweet from "./Tweet";
 
 function Middle(props) {
   const [tweets, setTweets] = useState([]);
+  const [inputTweet, setInputTweet] = useState([]);
   // get data tweets from backend
   useEffect(() => {
     fetch("http://localhost:3000/tweets")
@@ -24,6 +25,19 @@ function Middle(props) {
         setTweets(tweets);
       });
   }, []);
+  const handleClickCreateTweet = () => {
+    fetch("http://localhost:3000/user", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: inputTweet,
+        nbLike: 0,
+        time: Date.now(),
+      }),
+    })
+      .then((response) => response.json())
+      .then((tweet) => console.log(tweet));
+  };
   return (
     <>
       <h1 className={styles.header}>Home</h1>
@@ -32,11 +46,18 @@ function Middle(props) {
           type="text"
           placeholder="What's up"
           className={styles.inputTweet}
+          onChange={(e) => setInputTweet(e.target.value)}
+          value={inputTweet}
         />
       </div>
       <div className={styles.blockButtonCharacters}>
         <span className={styles.numberCharacter}>14/280</span>
-        <button className={styles.tweetButton}>Tweet</button>
+        <button
+          className={styles.tweetButton}
+          onClick={() => handleClickCreateTweet()}
+        >
+          Tweet
+        </button>
       </div>
       <div className={styles.tweetBlock}>{tweets}</div>
     </>

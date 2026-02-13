@@ -5,42 +5,6 @@ import Right from "./Right";
 import Middle from "./Middle";
 
 function Home() {
-  const [tweets, setTweets] = useState([]);
-  const [inputTweet, setinputTweet] = useState("");
-  // get data tweets from backend
-  useEffect(() => {
-    fetch("http://localhost:3000/tweets")
-      .then((response) => response.json())
-      .then((data) => {
-        let tweets = data.tweet.map((tweet) => {
-          return (
-            <Tweet
-              message={tweet.message}
-              nbLike={tweet.nbLike}
-              time={tweet.time}
-              firstname={tweet.user.firstname}
-              username={tweet.user.lastname}
-            />
-          );
-        });
-        setTweets(tweets);
-      });
-  }, []);
-
-  const handleClickCreateTweet = () => {
-    fetch("http://localhost:3000/user", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        message: inputTweet,
-        nbLike: 0,
-        time: Date.now(),
-      }),
-    })
-      .then((response) => response.json())
-      .then((tweet) => console.log(tweet));
-  };
-
   return (
     <div className={styles.container}>
       <div className={styles.partOne}>
@@ -68,29 +32,12 @@ function Home() {
           <button className={styles.logout}>Logout</button>
         </div>
       </div>
-      <div className={styles.partTwo}>
-        <h1 className={styles.header}>Home</h1>
-        <div className={styles.blockInputTweet}>
-          <input
-            type="text"
-            placeholder="What's up"
-            className={styles.inputTweet}
-            onChange={(e) => setinputTweet(e.target.value)}
-            value={inputTweet}
-          />
-        </div>
-        <div className={styles.blockButtonCharacters}>
-          <span className={styles.numberCharacter}>14/280</span>
-          <button
-            className={styles.tweetButton}
-            onClick={() => handleClickCreateTweet()}
-          >
-            Tweet
-          </button>
-        </div>
-        <div className={styles.tweetBlock}>{tweets}</div>
+      <div className={styles.middle}>
+        <Middle />
       </div>
-      <Right />
+      <div className={styles.right}>
+        <Right />
+      </div>
     </div>
   );
 }
