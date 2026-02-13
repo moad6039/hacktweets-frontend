@@ -1,0 +1,23 @@
+.tweet {
+    padding: 20px;
+    color: white;
+    border-bottom: 1px #3b444f solid;
+}
+
+.firstPart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.secondPart {
+    padding-left: 70px;
+}
+
+.thirdPart {
+    padding-left: 10px;
+}
+
+.nbLike {
+    margin-right: 5px;
+}

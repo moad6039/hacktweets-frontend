@@ -91,6 +91,9 @@
   border-left: none;
   border-right: none;
   border-top: none;
+  color: white;
+  padding-left: 10px;
+  font-size: 20px;
 }
 
 .blockButtonCharacters {
