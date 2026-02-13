@@ -2,13 +2,44 @@ import styles from "../styles/Login.module.css";
 import Image from "next/image";
 import Signup from "./Signup";
 import Signin from "./Signin";
+import { useState } from "react";
 
 function Login() {
+  const [showSignup, setShowSignup] = useState(false);
+  const [showSignin, setShowSignin] = useState(false);
   return (
     <div>
       <main className={styles.main}>
-        <Signup />
-        <Signin />
+        {/* Modale Signup */}
+        {showSignup && (
+          <div className={styles.modalOverlay}>
+            <div className={styles.modalContent}>
+              <button
+                className={styles.closeButton}
+                onClick={() => setShowSignup(false)}
+              >
+                X
+              </button>
+              <Signup />
+            </div>
+          </div>
+        )}
+
+        {/* Modale Signin */}
+        {showSignin && (
+          <div className={styles.modalOverlay}>
+            <div className={styles.modalContent}>
+              <button
+                className={styles.closeButton}
+                onClick={() => setShowSignin(false)}
+              >
+                X
+              </button>
+              <Signin />
+            </div>
+          </div>
+        )}
+        {/* Logo of Login */}
         <div className={styles.logo}>
           <Image
             src="/Twitter_logo.png"
@@ -22,17 +53,23 @@ function Login() {
         </div>
         <div className={styles.sentence}>
           <p>
-            <strong>Join Hackatweet today</strong>
+            <strong>Join Hackatweet today.</strong>
           </p>
         </div>
         <div className={styles.buttonGroup}>
-          <button href="/" className={styles.signupButton}>
+          <button
+            onClick={() => setShowSignup(true)}
+            className={styles.signupButton}
+          >
             Sign up
           </button>
           <p className={styles.sentence2}>
             <strong>Already have an account ?</strong>
           </p>
-          <button href="/" className={styles.signinButton}>
+          <button
+            onClick={() => setShowSignin(true)}
+            className={styles.signinButton}
+          >
             Sign in
           </button>
         </div>
