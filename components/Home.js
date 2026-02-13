@@ -44,8 +44,8 @@ function Home() {
               className={styles.profilPicture}
             />
             <div className={styles.identifiant}>
-              <span className={styles.firstname}>Firstname</span>
-              <span className={styles.lastname}>Lastname</span>
+              <span className={styles.firstname}>firstname</span>
+              <span className={styles.lastname}>username</span>
             </div>
           </div>
           <button className={styles.logout}>Logout</button>
