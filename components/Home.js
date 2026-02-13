@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 function Home() {
 
   const [tweets, setTweets] = useState([]);
+  const [inputTweet, setinputTweet] = useState("");
   // get data tweets from backend
   useEffect(() => {
     fetch("http://localhost:3000/tweets")
@@ -18,7 +19,19 @@ function Home() {
     })
   }, [])
 
-
+  const handleClickCreateTweet = () => {
+    fetch("http://localhost:3000/user", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        message: inputTweet,
+        nbLike: 0,
+        time: Date.now(),
+      })
+    })
+    .then(response => response.json())
+    .then((tweet) => console.log(tweet))
+  }
 
   return (
     <div className={styles.container}>
@@ -42,11 +55,11 @@ function Home() {
       <div className={styles.partTwo}>
           <h1 className={styles.header}>Home</h1>
           <div className={styles.blockInputTweet}>
-            <input type='text' placeholder="What's up" className={styles.inputTweet}/>
+            <input type='text' placeholder="What's up" className={styles.inputTweet} onChange={(e) => setinputTweet(e.target.value)} value={inputTweet} />
           </div>
           <div className={styles.blockButtonCharacters}>
             <span className={styles.numberCharacter}>14/280</span>
-            <button className={styles.tweetButton}>Tweet</button>
+            <button className={styles.tweetButton} onClick={() => handleClickCreateTweet()}>Tweet</button>
           </div>
           <div className={styles.tweetBlock}>
             {tweets}
