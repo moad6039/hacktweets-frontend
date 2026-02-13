@@ -1,4 +1,4 @@
-import styles from "../styles/CompHashtag.module.css";
+import styles from "../styles/Home.module.css";
 function CompHashtag(props) {
   //props expected : hashtag name & nbtweets related
   return (

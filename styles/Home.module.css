@@ -127,3 +127,8 @@
   color: white;
   text-align: center;
 }
+.hashtagTitle,
+.nbTweets {
+  color: white;
+  width: 100%;
+}

@@ -1,7 +1,7 @@
-import HashtagPage from "../components/Hashtag";
+import Home from "../components/Home";
 
 function HashtagPage() {
-  return <HashtagPage />;
+  return <Home />;
 }
 
 export default HashtagPage;
