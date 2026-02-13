@@ -28,6 +28,7 @@ function Signup() {
           setFirstname("");
           setUsername("");
           setPassword("");
+          router.push("/accueil");
         } else {
           console.log("Registration failed");
         }

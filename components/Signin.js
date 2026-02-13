@@ -3,11 +3,15 @@ import styles from "../styles/Login.module.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../reducers/user";
+import { useRouter } from "next/router";
 
 function Signin() {
   const dispatch = useDispatch();
+  const router = useRouter();
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
   //partie fetch et affichage de la page Home lors de la connection
   const handleConnection = () => {
     fetch("http://localhost:3000/users/signin", {
@@ -24,6 +28,7 @@ function Signin() {
           dispatch(login({ username: username, token: data.token }));
           setUsername("");
           setPassword("");
+          router.push("/accueil");
         } else {
           console.log("Connection failed");
         }
