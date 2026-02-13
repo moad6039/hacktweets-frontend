@@ -3,6 +3,7 @@ import styles from "../styles/Login.module.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../reducers/user";
+import router from "next/router";
 
 function Signup() {
   const dispatch = useDispatch();

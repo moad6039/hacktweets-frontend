@@ -7,7 +7,7 @@ import Tweet from "./Tweet";
 function Middle(props) {
   const [tweets, setTweets] = useState([]);
   const [inputTweet, setInputTweet] = useState([]);
-  const user = useSelector((state) => state.value.user);
+
   // get data tweets from backend
   useEffect(() => {
     fetch("http://localhost:3000/tweets")

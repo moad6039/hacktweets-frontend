@@ -15,10 +15,11 @@ export default function UserDisplayInformations() {
             className={styles.profilPicture}
           />
           <div className={styles.identifiant}>
-            <span className={styles.firstname}>firstname</span>
-            <span className={styles.lastname}>username</span>
+            <span className={styles.firstname}>{user.firstname}</span>
+            <span className={styles.lastname}>{user.username}</span>
           </div>
         </div>
+        <button className={styles.logout}>Logout</button>
       </div>
     </>
   );

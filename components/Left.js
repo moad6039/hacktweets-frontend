@@ -1,6 +1,5 @@
 import styles from "../styles/Home.module.css";
 import UserDisplayInformations from "./UserDisplayInformations";
-import LogoutButton from "./LogoutButton";
 
 export default function Left() {
   return (
@@ -16,7 +15,6 @@ export default function Left() {
       </div>
       <div>
         <UserDisplayInformations />
-        <LogoutButton />
       </div>
     </>
   );
