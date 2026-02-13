@@ -1,9 +1,10 @@
 .container {
   background-color: #15202b;
   display: flex;
+  height: 100vh;
 }
 
-.partOne {
+.left {
   width: 20%;
   height: 100vh;
   display: flex;

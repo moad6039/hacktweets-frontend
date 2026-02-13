@@ -8,19 +8,11 @@ import Middle from "./Middle";
 function Home() {
   return (
     <div className={styles.container}>
-      <Left />
-      <div className={styles.partTwo}>
-          <h1 className={styles.header}>Home</h1>
-          <div className={styles.blockInputTweet}>
-            <input type='text' placeholder="What's up" className={styles.inputTweet} onChange={(e) => setinputTweet(e.target.value)} value={inputTweet} />
-          </div>
-          <div className={styles.blockButtonCharacters}>
-            <span className={styles.numberCharacter}>14/280</span>
-            <button className={styles.tweetButton} onClick={() => handleClickCreateTweet()}>Tweet</button>
-          </div>
-          <div className={styles.tweetBlock}>
-            {tweets}
-          </div>
+      <div className={styles.middle}>
+        <Left />
+      </div>
+      <div className={styles.middle}>
+        <Middle />
       </div>
       <div className={styles.right}>
         <Right />
